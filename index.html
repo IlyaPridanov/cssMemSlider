@@ -9,27 +9,31 @@
 </head>
 <body>
     <div class="container">
+        <h1 class="caption">Спокойно! Здесь нет JS!</h1>
         <div class="grid">
+            <input class="radio visually-hidden" type="radio" name="slider" id="slide1" checked>
+            <input class="radio visually-hidden" type="radio" name="slider" id="slide2">
+            <input class="radio visually-hidden" type="radio" name="slider" id="slide3">
+            <input class="radio visually-hidden" type="radio" name="slider" id="slide4">
             <div class="slider grid__slider">
-                <div class="slider__slide active" data-slide="brat"><img src="img/brat.jpg" alt="slide"></div>
-                <div class="slider__slide left" data-slide="harry"><img src="img/harry.jpg" alt="slide"></div>
-                <div class="slider__slide right" data-slide="zavod"><img src="img/zavod.jpg" alt="slide"></div>
-                <div class="slider__slide right" data-slide="beer"><img src="img/beer.jpg" alt="slide"></div>
+                <div class="slider__slide" data-slide="brat"><img src="img/brat.jpg" alt="slide"></div>
+                <div class="slider__slide" data-slide="harry"><img src="img/harry.jpg" alt="slide"></div>
+                <div class="slider__slide"><img src="img/zavod.jpg" alt="slide"></div>
+                <div class="slider__slide"><img src="img/beer.jpg" alt="slide"></div>
             </div>
             <div class="buttons grid__buttons">
-                <button class="buttons__btn active" type="button" aria-label="button-slider" data-slide="brat"><span></span></button>
-                <button class="buttons__btn" type="button" aria-label="button-slider" data-slide="harry"><span></span></button>
-                <button class="buttons__btn" type="button" aria-label="button-slider" data-slide="zavod"><span></span></button>
-                <button class="buttons__btn" type="button" aria-label="button-slider" data-slide="beer"><span></span></button>
+                <label class="buttons__btn" for="slide1"><span></span></label>
+                <label class="buttons__btn" for="slide2"><span></span></label>
+                <label class="buttons__btn" for="slide3"><span></span></label>
+                <label class="buttons__btn" for="slide4"><span></span></label>
             </div>
-            <div class="text grid__text">
-                <p class="active" data-slide="brat">Mem about brat</p>
-                <p class="left" data-slide="harry">Mem about harry</p>
-                <p class="right" data-slide="zavod">Mem about zavod</p>
-                <p class="right" data-slide="beer">Mem about beer</p>
+            <div class="grid__text">
+                <p class="text">Mem about brat</p>
+                <p class="text">Mem about harry</p>
+                <p class="text">Mem about zavod</p>
+                <p class="text">Mem about beer</p>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

@@ -17,6 +17,23 @@ body {
     box-sizing: border-box;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.caption {
+    text-align: center;
+}
+
 @media screen and (max-width:768px) {
     body {
         font-size: 1.6rem;
@@ -56,6 +73,9 @@ body {
 
 .grid__text {
     grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: auto;
 }
 
 @media screen and (max-width:768px) {
@@ -81,31 +101,26 @@ body {
     }
 }
 
-/* slider */
+/* slide */
 
 .slider {
-    overflow: hidden;
-    height: 37rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 }
 
 .slider__slide {
+    grid-column: 1/2;
+    grid-row: 1/2;
     overflow: hidden;
+    flex: 0 0 100%;
     width: 100%;
-    height: 100%;
-
+    height: 37rem;
     border-radius: 1.9rem;
-}
 
-.slider__slide.active {
-    transform: translateX(0);
-}
-
-.slider__slide.left {
+    transition: all 0.5s ease-in;
+    opacity: 0;
     transform: translateX(-105%);
-}
-
-.slider__slide.right {
-    transform: translateX(105%);
 }
 
 .slider__slide img {
@@ -124,7 +139,7 @@ body {
 }
 
 @media screen and (max-width:768px) {
-    .slider {
+    .slider__slide {
         height: 70vw;
     }
 }
@@ -158,10 +173,6 @@ body {
     border: 0.1rem solid aqua;
 }
 
-.buttons__btn.active span {
-    background: none;
-}
-
 .buttons__btn:hover {
     cursor: pointer;
 }
@@ -171,35 +182,116 @@ body {
     border-color: #fff;
 }
 
-.buttons__btn.active:hover span {
-    background-color: transparent;
+.buttons__btn:active span {
+    background-color: grey;
+    border-color: grey;
 }
 
 /* text */
 
 .text {
-    overflow: hidden;
-
-    height: 2.5rem;
-    width: 70%;
-    margin-right: auto;
-}
-
-.text p {
+    grid-column: 1/2;
+    grid-row: 1/2;
     margin: 0;
     width: 100%;
-}
 
-.text p.active {
-    transform: translateX(0);
-}
-
-
-.text p.left {
+    transition: all 0.5s ease-in;
+    opacity: 0;
     transform: translateX(-105%);
 }
 
+/* radio */
 
-.text p.right {
-    transform: translateX(105%);
+/* кнопки */
+
+.radio:nth-child(1):checked ~ .buttons .buttons__btn:nth-child(1) span {
+    background: none;
+}
+
+.radio:nth-child(1):checked ~ .buttons .buttons__btn:nth-child(1):hover span {
+    border-color: white;
+}
+
+.radio:nth-child(1):checked ~ .buttons .buttons__btn:nth-child(1):active span {
+    border-color: grey;
+}
+
+.radio:nth-child(2):checked ~ .buttons .buttons__btn:nth-child(2) span {
+    background: none;
+}
+
+.radio:nth-child(2):checked ~ .buttons .buttons__btn:nth-child(2):hover span {
+    border-color: white;
+}
+
+.radio:nth-child(2):checked ~ .buttons .buttons__btn:nth-child(2):active span {
+    border-color: grey;
+}
+
+.radio:nth-child(3):checked ~ .buttons .buttons__btn:nth-child(3) span {
+    background: none;
+}
+
+.radio:nth-child(3):checked ~ .buttons .buttons__btn:nth-child(3):hover span {
+    border-color: white;
+}
+
+.radio:nth-child(3):checked ~ .buttons .buttons__btn:nth-child(3):active span {
+    border-color: grey;
+}
+
+.radio:nth-child(4):checked ~ .buttons .buttons__btn:nth-child(4) span {
+    background: none;
+}
+
+.radio:nth-child(4):checked ~ .buttons .buttons__btn:nth-child(4):hover span {
+    border-color: white;
+}
+
+.radio:nth-child(4):checked ~ .buttons .buttons__btn:nth-child(4):active span {
+    border-color: grey;
+}
+
+/* слайды */
+
+.radio:nth-child(1):checked ~ .slider .slider__slide:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.radio:nth-child(2):checked ~ .slider .slider__slide:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.radio:nth-child(3):checked ~ .slider .slider__slide:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.radio:nth-child(4):checked ~ .slider .slider__slide:nth-child(4) {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* текст */
+
+.radio:nth-child(1):checked ~ .grid__text .text:nth-child(1) {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.radio:nth-child(2):checked ~ .grid__text .text:nth-child(2) {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.radio:nth-child(3):checked ~ .grid__text .text:nth-child(3) {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.radio:nth-child(4):checked ~ .grid__text .text:nth-child(4) {
+    opacity: 1;
+    transform: translateX(0);
 }
