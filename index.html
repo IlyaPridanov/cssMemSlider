@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cssMemSlider</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="grid">
+            <div class="slider grid__slider">
+                <div class="slider__slide active" data-slide="brat"><img src="img/brat.jpg" alt="slide"></div>
+                <div class="slider__slide left" data-slide="harry"><img src="img/harry.jpg" alt="slide"></div>
+                <div class="slider__slide right" data-slide="zavod"><img src="img/zavod.jpg" alt="slide"></div>
+                <div class="slider__slide right" data-slide="beer"><img src="img/beer.jpg" alt="slide"></div>
+            </div>
+            <div class="buttons grid__buttons">
+                <button class="buttons__btn active" type="button" aria-label="button-slider" data-slide="brat"><span></span></button>
+                <button class="buttons__btn" type="button" aria-label="button-slider" data-slide="harry"><span></span></button>
+                <button class="buttons__btn" type="button" aria-label="button-slider" data-slide="zavod"><span></span></button>
+                <button class="buttons__btn" type="button" aria-label="button-slider" data-slide="beer"><span></span></button>
+            </div>
+            <div class="text grid__text">
+                <p class="active" data-slide="brat">Mem about brat</p>
+                <p class="left" data-slide="harry">Mem about harry</p>
+                <p class="right" data-slide="zavod">Mem about zavod</p>
+                <p class="right" data-slide="beer">Mem about beer</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
