@@ -39,6 +39,10 @@ body {
     body {
         font-size: 1.6rem;
     }
+
+    .caption {
+        font-size: 1.9rem;
+    }
 }
 
 /* container */
