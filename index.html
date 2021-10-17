@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssMemSlider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="caption">Спокойно! Здесь нет JS!</h1>
+        <div class="grid">
+            <input class="radio visually-hidden" type="radio" name="slider" id="slide1" checked>
+            <input class="radio visually-hidden" type="radio" name="slider" id="slide2">
+            <input class="radio visually-hidden" type="radio" name="slider" id="slide3">
+            <input class="radio visually-hidden" type="radio" name="slider" id="slide4">
+            <div class="slider grid__slider">
+                <div class="slider__slide" data-slide="brat"><img src="img/brat.jpg" alt="slide"></div>
+                <div class="slider__slide" data-slide="harry"><img src="img/harry.jpg" alt="slide"></div>
+                <div class="slider__slide"><img src="img/zavod.jpg" alt="slide"></div>
+                <div class="slider__slide"><img src="img/beer.jpg" alt="slide"></div>
+            </div>
+            <div class="buttons grid__buttons">
+                <label class="buttons__btn" for="slide1"><span></span></label>
+                <label class="buttons__btn" for="slide2"><span></span></label>
+                <label class="buttons__btn" for="slide3"><span></span></label>
+                <label class="buttons__btn" for="slide4"><span></span></label>
+            </div>
+            <div class="grid__text">
+                <p class="text">Mem about brat</p>
+                <p class="text">Mem about harry</p>
+                <p class="text">Mem about zavod</p>
+                <p class="text">Mem about beer</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
